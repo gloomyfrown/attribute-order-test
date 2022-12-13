@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script type="text/javascript">
+
+        var srcURL = "https://cdn.betterttv.net/emote/5ada077451d4120ea3918426/1x";
+        var srcsetURL = "https://cdn.betterttv.net/emote/5ada077451d4120ea3918426/1x 1x, https://cdn.betterttv.net/emote/5ada077451d4120ea3918426/2x 2x, https://cdn.betterttv.net/emote/5ada077451d4120ea3918426/3x 4x";
+
+        function srcTest() {
+            var img = document.createElement("img");
+            img.src = srcURL;
+            img.srcset = srcsetURL;
+            img.alt = ""
+            document.body.appendChild(img);
+        }
+
+        function srcsetTest() {
+            var img = document.createElement("img");
+            img.srcset = srcsetURL;
+            img.src = srcURL;
+            img.alt = "";
+            document.body.appendChild(img);
+        }
+    </script>
+</head>
+
+<body>
+    <p>Make sure your browser is set to 100% zoom for the issue to appear</p>
+    <button onclick="srcTest()">Create img, src then srcset</button>
+    <button onclick="srcsetTest()">Create img, srcset then src</button>
+    <br>
+</body>
+
+</html>
